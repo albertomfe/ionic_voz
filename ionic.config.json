@@ -1,0 +1,7 @@
+{
+  "name": "dispositivo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
