@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'voz',
+    loadChildren: () => import('./pages/voz/voz.module').then( m => m.VozPageModule)
+  },
 ];
 
 @NgModule({
