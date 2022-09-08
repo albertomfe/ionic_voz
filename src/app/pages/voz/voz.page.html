@@ -6,13 +6,32 @@
 
 <ion-content>
 
+  <ion-row>
+    <ion-col size="12">
 
-  <ion-button (click)="grabar()" expand="block" fill="clear" shape="round">
-    Grabar
+      <ion-card mode='ios'>
+        <ion-card-header>
+          <ion-card-subtitle>POR ULTIMO FAVOR LER EL TEXTO DE ABAJO PARA CERTIFICAR EL PRESTAMO.</ion-card-subtitle>
+          <ion-card-title>TESTIMONIO</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Yo Manuel certifico que solicite un prestamo de 4 mil pesos , a un plazo de 12 semanas en la Plataforma de Nuvun, el dia 
+          9 de septiembre de 2022 y doy mi consentimiento para procesar mi informacion,
+          con la finalidad de dar el seguimiento del credito solicitado por mi parte.
+        </ion-card-content>
+      </ion-card>
+    
+    </ion-col>
+  </ion-row>
+
+
+  <ion-button *ngIf="!this.recording" (click)="grabar()" expand="full"  shape="round" color="success">
+    <ion-icon slot="icon-only" name="mic-outline"></ion-icon>
   </ion-button>
 
-  <ion-button (click)="parar()" expand="block" fill="clear" shape="round">
-    Parar
+  <ion-button *ngIf="this.recording" (click)="parar()"  expand="full"  shape="round" color="danger">
+    <ion-icon slot="icon-only" name="stop-circle-outline"></ion-icon>
   </ion-button>
 
 

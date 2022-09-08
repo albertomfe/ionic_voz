@@ -59,6 +59,7 @@ export class VozPage implements OnInit {
     });
   }
 
+  
   playAudio()
   {
     const audioRef=new Audio(`data:audio/aac;base64,${this.grabacion}`)
